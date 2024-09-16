@@ -1,0 +1,71 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
+  "schemes" : [
+    {
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        },
+        "modifiers" : {
+          "vertical" : {
+            "command" : {
+              "type" : "zoom"
+            }
+          },
+          "horizontal" : {
+            "command" : {
+              "type" : "preventDefault"
+            }
+          }
+        },
+        "acceleration" : 2,
+        "speed" : {
+          "vertical" : 3,
+          "horizontal" : 2
+        }
+      },
+      "pointer" : {
+        "speed" : 0.1,
+        "acceleration" : 1
+      },
+      "if" : {
+        "device" : {
+          "productName" : "2.4G Receiver",
+          "vendorID" : "0x25a7",
+          "productID" : "0xfa61",
+          "category" : "mouse"
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productID" : "0xfa61",
+          "productName" : "2.4G Receiver",
+          "category" : "mouse",
+          "vendorID" : "0x25a7"
+        },
+        "app" : "company.thebrowser.Browser"
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 2
+        }
+      }
+    },
+    {
+      "pointer" : {
+        "speed" : 0.15
+      },
+      "if" : {
+        "app" : "com.lujjjh.LinearMouse",
+        "device" : {
+          "category" : "mouse",
+          "productName" : "2.4G Receiver",
+          "vendorID" : "0x25a7",
+          "productID" : "0xfa61"
+        }
+      }
+    }
+  ]
+}

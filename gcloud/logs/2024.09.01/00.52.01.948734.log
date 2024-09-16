@@ -1,0 +1,110 @@
+2024-09-01 00:52:01,949 DEBUG    root            Loaded Command Group: ['gcloud', 'run']
+2024-09-01 00:52:02,077 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'deploy']
+2024-09-01 00:52:02,084 DEBUG    root            Running [gcloud.run.deploy] with arguments: [--allow-unauthenticated: "True", --image: "gcr.io/jeevan-hm-portfolio-413008/portfolio:v2.0", --platform: "managed", --region: "asia-east1", SERVICE: "jeevanhm"]
+2024-09-01 00:52:02,134 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): serviceusage.googleapis.com:443
+2024-09-01 00:52:02,676 DEBUG    urllib3.connectionpool https://serviceusage.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/services/run.googleapis.com?alt=json HTTP/1.1" 200 None
+2024-09-01 00:52:02,721 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2024-09-01 00:52:03,700 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/jeevan-hm-portfolio-413008/services/jeevanhm?alt=json HTTP/1.1" 200 None
+2024-09-01 00:52:03,707 INFO     ___FILE_ONLY___ Deploying container to Cloud Run service [[1mjeevanhm[m] in project [[1mjeevan-hm-portfolio-413008[m] region [[1masia-east1[m]
+
+2024-09-01 00:52:03,708 INFO     ___FILE_ONLY___ Deploying...
+2024-09-01 00:52:03,715 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2024-09-01 00:52:04,930 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "PUT /apis/serving.knative.dev/v1/namespaces/jeevan-hm-portfolio-413008/services/jeevanhm?alt=json HTTP/1.1" 200 None
+2024-09-01 00:52:04,938 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): run.googleapis.com:443
+2024-09-01 00:52:05,150 DEBUG    root            (gcloud.run.deploy) Aborted by user.
+Traceback (most recent call last):
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 998, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 838, in Run
+    resources = command_instance.Run(args)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/surface/run/deploy.py", line 627, in Run
+    service = operations.ReleaseService(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 920, in ReleaseService
+    self._HandleAllowUnauthenticated(
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 958, in _HandleAllowUnauthenticated
+    self.AddOrRemoveIamPolicyBinding(
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 1778, in AddOrRemoveIamPolicyBinding
+    policy = self._GetIamPolicy(oneplatform_service)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 1746, in _GetIamPolicy
+    response = self._op_client.projects_locations_services.GetIamPolicy(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/generated_clients/apis/run/v1/run_v1_client.py", line 1668, in GetIamPolicy
+    return self._RunMethod(
+           ^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 734, in _RunMethod
+    http_response = http_wrapper.MakeRequest(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/third_party/apitools/base/py/http_wrapper.py", line 359, in MakeRequest
+    retry_func(ExceptionRetryArgs(http, http_request, e, retry,
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/third_party/apitools/base/py/http_wrapper.py", line 304, in HandleExceptionsAndRebuildHttpConnections
+    raise retry_args.exc
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/third_party/apitools/base/py/http_wrapper.py", line 348, in MakeRequest
+    return _MakeRequestNoRetry(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/third_party/apitools/base/py/http_wrapper.py", line 397, in _MakeRequestNoRetry
+    info, content = http.request(
+                    ^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/core/requests.py", line 426, in HttpRequest
+    return orig_request_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/core/requests.py", line 510, in request
+    response = self.session.request(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/core/transport.py", line 269, in WrappedRequest
+    response = orig_request(*modified_args, **modified_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/core/credentials/requests.py", line 107, in WrappedRequest
+    response = orig_request(
+               ^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/core/transport.py", line 269, in WrappedRequest
+    response = orig_request(*modified_args, **modified_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/core/transport.py", line 269, in WrappedRequest
+    response = orig_request(*modified_args, **modified_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/core/requests.py", line 246, in WrappedRequest
+    return orig_request_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/third_party/requests/sessions.py", line 544, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/third_party/requests/sessions.py", line 657, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/third_party/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 717, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 469, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 464, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.5/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 1428, in getresponse
+    response.begin()
+  File "/opt/homebrew/Cellar/python@3.12/3.12.5/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.5/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.5/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.5/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 1252, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.5/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 1104, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/core/console/progress_tracker.py", line 741, in _CtrlCHandler
+    raise console_io.OperationCancelledError(self._aborted_message)
+googlecloudsdk.core.console.console_io.OperationCancelledError: Aborted by user.
+2024-09-01 00:52:05,165 ERROR    root            (gcloud.run.deploy) Aborted by user.

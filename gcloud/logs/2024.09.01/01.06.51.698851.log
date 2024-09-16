@@ -1,0 +1,71 @@
+2024-09-01 01:06:51,699 DEBUG    root            Loaded Command Group: ['gcloud', 'run']
+2024-09-01 01:06:51,837 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'deploy']
+2024-09-01 01:06:51,844 DEBUG    root            Running [gcloud.run.deploy] with arguments: [--allow-unauthenticated: "True", --image: "gcr.io/jeevan-hm-portfolio-413008/portfolio:v2.0", --platform: "managed", --region: "asia-east1", SERVICE: "jeevanhm"]
+2024-09-01 01:06:51,861 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): serviceusage.googleapis.com:443
+2024-09-01 01:06:52,356 DEBUG    urllib3.connectionpool https://serviceusage.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/services/run.googleapis.com?alt=json HTTP/1.1" 200 None
+2024-09-01 01:06:52,402 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2024-09-01 01:06:53,314 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/jeevan-hm-portfolio-413008/services/jeevanhm?alt=json HTTP/1.1" 200 None
+2024-09-01 01:06:53,323 INFO     ___FILE_ONLY___ Deploying container to Cloud Run service [[1mjeevanhm[m] in project [[1mjeevan-hm-portfolio-413008[m] region [[1masia-east1[m]
+
+2024-09-01 01:06:53,323 INFO     ___FILE_ONLY___ Deploying...
+2024-09-01 01:06:53,329 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2024-09-01 01:06:54,535 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "PUT /apis/serving.knative.dev/v1/namespaces/jeevan-hm-portfolio-413008/services/jeevanhm?alt=json HTTP/1.1" 200 None
+2024-09-01 01:06:54,542 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): run.googleapis.com:443
+2024-09-01 01:06:55,726 DEBUG    urllib3.connectionpool https://run.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/asia-east1/services/jeevanhm:getIamPolicy?alt=json HTTP/1.1" 200 None
+2024-09-01 01:06:55,731 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): run.googleapis.com:443
+2024-09-01 01:06:57,061 DEBUG    urllib3.connectionpool https://run.googleapis.com:443 "POST /v1/projects/jeevan-hm-portfolio-413008/locations/asia-east1/services/jeevanhm:setIamPolicy?alt=json HTTP/1.1" 200 None
+2024-09-01 01:06:57,069 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2024-09-01 01:07:04,946 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "POST /v1/projects/jeevan-hm-portfolio-413008/locations/asia-east1/operations/13a51a43-a737-496d-8d7b-620c3f62a51b:wait?alt=json HTTP/1.1" 200 None
+2024-09-01 01:07:04,963 DEBUG    root            (gcloud.run.deploy) Revision 'jeevanhm-00028-c4w' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.
+
+Logs URL: https://console.cloud.google.com/logs/viewer?project=jeevan-hm-portfolio-413008&resource=cloud_run_revision/service_name/jeevanhm/revision_name/jeevanhm-00028-c4w&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22jeevanhm%22%0Aresource.labels.revision_name%3D%22jeevanhm-00028-c4w%22 
+For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+Traceback (most recent call last):
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 998, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 838, in Run
+    resources = command_instance.Run(args)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/surface/run/deploy.py", line 627, in Run
+    service = operations.ReleaseService(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 939, in ReleaseService
+    self.WaitForCondition(poller)
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 272, in WaitForCondition
+    return waiter.PollUntilDone(poller, None, wait_ceiling_ms=1000)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/waiter.py", line 322, in PollUntilDone
+    operation = retryer.RetryOnResult(
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/core/util/retry.py", line 239, in RetryOnResult
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/op_pollers.py", line 147, in Poll
+    conditions = self.GetConditions()
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/op_pollers.py", line 278, in GetConditions
+    resource = self._resource_getter()
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 357, in WaitService
+    operation = waiter.PollUntilDone(poller, op_ref)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/waiter.py", line 322, in PollUntilDone
+    operation = retryer.RetryOnResult(
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/core/util/retry.py", line 249, in RetryOnResult
+    if not should_retry(result, state):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/waiter.py", line 320, in _IsNotDone
+    return not poller.IsDone(operation)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/google-cloud-sdk/490.0.0/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/waiter.py", line 122, in IsDone
+    raise OperationError(operation.error.message)
+googlecloudsdk.api_lib.util.waiter.OperationError: Revision 'jeevanhm-00028-c4w' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.
+
+Logs URL: https://console.cloud.google.com/logs/viewer?project=jeevan-hm-portfolio-413008&resource=cloud_run_revision/service_name/jeevanhm/revision_name/jeevanhm-00028-c4w&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22jeevanhm%22%0Aresource.labels.revision_name%3D%22jeevanhm-00028-c4w%22 
+For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+2024-09-01 01:07:04,970 ERROR    root            (gcloud.run.deploy) Revision 'jeevanhm-00028-c4w' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.
+
+Logs URL: https://console.cloud.google.com/logs/viewer?project=jeevan-hm-portfolio-413008&resource=cloud_run_revision/service_name/jeevanhm/revision_name/jeevanhm-00028-c4w&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22jeevanhm%22%0Aresource.labels.revision_name%3D%22jeevanhm-00028-c4w%22 
+For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start

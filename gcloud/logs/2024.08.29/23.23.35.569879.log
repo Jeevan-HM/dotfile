@@ -1,0 +1,7 @@
+2024-08-29 23:23:35,571 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2024-08-29 23:23:35,574 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'get_value']
+2024-08-29 23:23:35,575 DEBUG    root            Running [gcloud.config.get-value] with arguments: [SECTION/PROPERTY: "project"]
+2024-08-29 23:23:35,575 DEBUG    root            Chosen display Format:value(.)
+2024-08-29 23:23:35,576 INFO     root            Display format: "value(.)"
+2024-08-29 23:23:35,576 INFO     ___FILE_ONLY___ jeevan-hm-portfolio-413008
+

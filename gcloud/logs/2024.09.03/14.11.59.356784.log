@@ -1,0 +1,172 @@
+2024-09-03 14:11:59,357 DEBUG    root            Loaded Command Group: ['gcloud', 'run']
+2024-09-03 14:11:59,469 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'deploy']
+2024-09-03 14:11:59,475 DEBUG    root            Running [gcloud.run.deploy] with arguments: []
+2024-09-03 14:11:59,475 INFO     ___FILE_ONLY___ Deploying from source. To deploy a container use [--image]. See https://cloud.google.com/run/docs/deploying-source-code for more details.
+
+2024-09-03 14:12:05,112 INFO     ___FILE_ONLY___ Next time, use `gcloud run deploy --source .` to deploy the current directory.
+
+
+2024-09-03 14:12:09,575 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): serviceusage.googleapis.com:443
+2024-09-03 14:12:09,949 DEBUG    urllib3.connectionpool https://serviceusage.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/services/artifactregistry.googleapis.com?alt=json HTTP/1.1" 200 None
+2024-09-03 14:12:09,996 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): serviceusage.googleapis.com:443
+2024-09-03 14:12:10,376 DEBUG    urllib3.connectionpool https://serviceusage.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/services/cloudbuild.googleapis.com?alt=json HTTP/1.1" 200 None
+2024-09-03 14:12:10,405 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): serviceusage.googleapis.com:443
+2024-09-03 14:12:10,629 DEBUG    urllib3.connectionpool https://serviceusage.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/services/run.googleapis.com?alt=json HTTP/1.1" 200 None
+2024-09-03 14:12:10,668 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): run.googleapis.com:443
+2024-09-03 14:12:10,930 DEBUG    urllib3.connectionpool https://run.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations?alt=json&pageSize=100 HTTP/1.1" 200 None
+2024-09-03 14:12:26,737 INFO     ___FILE_ONLY___ To make this the default region, run `gcloud config set run/region us-west1`.
+
+
+2024-09-03 14:12:26,758 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): us-west1-run.googleapis.com:443
+2024-09-03 14:12:27,504 DEBUG    urllib3.connectionpool https://us-west1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/jeevan-hm-portfolio-413008/services/portfolio?alt=json HTTP/1.1" 404 None
+2024-09-03 14:12:27,573 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2024-09-03 14:12:28,123 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/us-west1/repositories/cloud-run-source-deploy?alt=json HTTP/1.1" 404 None
+2024-09-03 14:12:31,224 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): us-west1-run.googleapis.com:443
+2024-09-03 14:12:31,532 DEBUG    urllib3.connectionpool https://us-west1-run.googleapis.com:443 "POST /v1/projects/jeevan-hm-portfolio-413008/locations/us-west1/services/portfolio:testIamPermissions?alt=json HTTP/1.1" 200 None
+2024-09-03 14:12:33,649 INFO     ___FILE_ONLY___ Building using Dockerfile and deploying container to Cloud Run service [[1mportfolio[m] in project [[1mjeevan-hm-portfolio-413008[m] region [[1mus-west1[m]
+
+2024-09-03 14:12:33,652 INFO     ___FILE_ONLY___ Building and deploying new service...
+2024-09-03 14:12:33,664 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2024-09-03 14:12:33,956 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "POST /v1/projects/jeevan-hm-portfolio-413008/locations/us-west1/repositories?alt=json&repositoryId=cloud-run-source-deploy HTTP/1.1" 200 None
+2024-09-03 14:12:33,973 INFO     ___FILE_ONLY___ 
+2024-09-03 14:12:34,984 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2024-09-03 14:12:35,259 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/us-west1/operations/0baef7c4-e4fd-4352-a16e-40569d3d82f7?alt=json HTTP/1.1" 200 None
+2024-09-03 14:12:37,343 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2024-09-03 14:12:37,605 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/us-west1/operations/0baef7c4-e4fd-4352-a16e-40569d3d82f7?alt=json HTTP/1.1" 200 None
+2024-09-03 14:12:40,902 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2024-09-03 14:12:41,174 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/us-west1/operations/0baef7c4-e4fd-4352-a16e-40569d3d82f7?alt=json HTTP/1.1" 200 None
+2024-09-03 14:12:46,046 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2024-09-03 14:12:46,308 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/us-west1/operations/0baef7c4-e4fd-4352-a16e-40569d3d82f7?alt=json HTTP/1.1" 200 None
+2024-09-03 14:12:46,367 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): artifactregistry.googleapis.com:443
+2024-09-03 14:12:46,667 DEBUG    urllib3.connectionpool https://artifactregistry.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/us-west1/repositories/cloud-run-source-deploy?alt=json HTTP/1.1" 200 None
+2024-09-03 14:12:46,737 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-09-03 14:12:47,414 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /storage/v1/b/jeevan-hm-portfolio-413008_cloudbuild?alt=json HTTP/1.1" 404 247
+2024-09-03 14:12:47,422 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-09-03 14:12:48,377 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "POST /storage/v1/b?alt=json&enableObjectRetention=False&project=jeevan-hm-portfolio-413008 HTTP/1.1" 200 805
+2024-09-03 14:12:48,386 INFO     root            Using default gcloudignore file:
+--------------------------------------------------
+# This file specifies files that are *not* uploaded to Google Cloud
+# using gcloud. It follows the same syntax as .gitignore, with the addition of
+# "#!include" directives (which insert the entries of the given .gitignore-style
+# file at that point).
+#
+# For more information, run:
+#   $ gcloud topic gcloudignore
+#
+.gcloudignore
+# If you would like to upload your .git directory, .gitignore file or files
+# from your .gitignore file, remove the corresponding line
+# below:
+.git
+.gitignore
+#!include:.gitignore
+
+--------------------------------------------------
+2024-09-03 14:12:48,392 DEBUG    root            Skipping file [.DS_Store]
+2024-09-03 14:12:48,393 DEBUG    root            Skipping file [.gitignore]
+2024-09-03 14:12:48,393 DEBUG    root            Skipping file [.env]
+2024-09-03 14:12:48,395 DEBUG    root            Skipping file [__pycache__]
+2024-09-03 14:12:48,396 DEBUG    root            Skipping file [venv]
+2024-09-03 14:12:48,397 DEBUG    root            Skipping file [.git]
+2024-09-03 14:12:48,398 DEBUG    root            Skipping file [static/.DS_Store]
+2024-09-03 14:12:48,403 DEBUG    root            Skipping file [static/images/.DS_Store]
+2024-09-03 14:12:48,414 DEBUG    root            Added dir [static]
+2024-09-03 14:12:48,414 DEBUG    root            Added dir [faiss_index]
+2024-09-03 14:12:48,415 DEBUG    root            Added dir [templates]
+2024-09-03 14:12:48,415 DEBUG    root            Added dir [static/bio]
+2024-09-03 14:12:48,415 DEBUG    root            Added dir [static/images]
+2024-09-03 14:12:48,416 DEBUG    root            Added [app.yaml]
+2024-09-03 14:12:48,416 DEBUG    root            Added [requirements.txt]
+2024-09-03 14:12:48,417 DEBUG    root            Added [Dockerfile]
+2024-09-03 14:12:48,417 DEBUG    root            Added [.dockerignore]
+2024-09-03 14:12:48,418 DEBUG    root            Added [app.py]
+2024-09-03 14:12:48,419 DEBUG    root            Added [chatbot.py]
+2024-09-03 14:12:48,420 DEBUG    root            Added [static/waypoints.min.js]
+2024-09-03 14:12:48,421 DEBUG    root            Added [static/main.js]
+2024-09-03 14:12:48,426 DEBUG    root            Added [static/style.css]
+2024-09-03 14:12:48,427 DEBUG    root            Added [static/typed.min.js]
+2024-09-03 14:12:48,428 DEBUG    root            Added [static/bio/bio.txt]
+2024-09-03 14:12:48,429 DEBUG    root            Added [static/images/chatbox-icon.svg]
+2024-09-03 14:12:48,454 DEBUG    root            Added [static/images/portfolio-4.jpg]
+2024-09-03 14:12:48,454 DEBUG    root            Added [static/images/favicon.ico]
+2024-09-03 14:12:48,464 DEBUG    root            Added [static/images/hero.jpg]
+2024-09-03 14:12:48,480 DEBUG    root            Added [static/images/portfolio-1.jpg]
+2024-09-03 14:12:48,526 DEBUG    root            Added [static/images/portfolio-3.jpg]
+2024-09-03 14:12:48,526 DEBUG    root            Added [static/images/success.gif]
+2024-09-03 14:12:48,603 DEBUG    root            Added [static/images/portfolio-2.jpg]
+2024-09-03 14:12:48,603 DEBUG    root            Added [static/images/testimonial-1.jpg]
+2024-09-03 14:12:48,604 DEBUG    root            Added [static/images/testimonial-3.jpg]
+2024-09-03 14:12:48,605 DEBUG    root            Added [static/images/testimonial-2.jpg]
+2024-09-03 14:12:48,608 DEBUG    root            Added [static/images/blog-1.jpg]
+2024-09-03 14:12:48,611 DEBUG    root            Added [static/images/blog-3.jpg]
+2024-09-03 14:12:48,614 DEBUG    root            Added [static/images/blog-2.jpg]
+2024-09-03 14:12:48,615 DEBUG    root            Added [static/images/about1.jpg]
+2024-09-03 14:12:48,618 DEBUG    root            Added [static/images/about.png]
+2024-09-03 14:12:48,621 DEBUG    root            Added [static/images/about.jpg]
+2024-09-03 14:12:48,623 DEBUG    root            Added [faiss_index/index.faiss]
+2024-09-03 14:12:48,624 DEBUG    root            Added [faiss_index/index.pkl]
+2024-09-03 14:12:48,626 DEBUG    root            Added [templates/index.html]
+2024-09-03 14:12:48,629 INFO     root            Uploading [/var/folders/cv/0t05yq310k7dzk304yqnybqr0000gn/T/tmpwevyghhc/file.tgz] to [jeevan-hm-portfolio-413008_cloudbuild/source/1725397966.735826-8487be3441a44594b81ddd37346c2a2c.tgz]
+2024-09-03 14:12:48,630 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-09-03 14:12:48,916 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "POST /resumable/upload/storage/v1/b/jeevan-hm-portfolio-413008_cloudbuild/o?alt=json&name=source%2F1725397966.735826-8487be3441a44594b81ddd37346c2a2c.tgz&uploadType=resumable HTTP/1.1" 200 0
+2024-09-03 14:12:48,924 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2024-09-03 14:12:49,710 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "PUT /resumable/upload/storage/v1/b/jeevan-hm-portfolio-413008_cloudbuild/o?alt=json&name=source%2F1725397966.735826-8487be3441a44594b81ddd37346c2a2c.tgz&uploadType=resumable&upload_id=AD-8ljsWngCsawhkbhltWUESnaPqyyhU6xdn0S-YS_fw_lCwDMd-bJR1JksEFvPiv-P_a-fb5B8giA37v8MpTABOYWi99Ibp4gGo9AU2GwYaaR4g HTTP/1.1" 200 1049
+2024-09-03 14:12:49,719 DEBUG    root            submitting build: <Build
+ images: ['us-west1-docker.pkg.dev/jeevan-hm-portfolio-413008/cloud-run-source-deploy/portfolio']
+ secrets: []
+ source: <Source
+ storageSource: <StorageSource
+ bucket: 'jeevan-hm-portfolio-413008_cloudbuild'
+ generation: 1725397969728186
+ object: 'source/1725397966.735826-8487be3441a44594b81ddd37346c2a2c.tgz'>>
+ steps: [<BuildStep
+ allowExitCodes: []
+ args: ['build', '--network', 'cloudbuild', '--no-cache', '-t', 'us-west1-docker.pkg.dev/jeevan-hm-portfolio-413008/cloud-run-source-deploy/portfolio', '.']
+ env: []
+ name: 'gcr.io/cloud-builders/docker'
+ secretEnv: []
+ volumes: []
+ waitFor: []>]
+ tags: []
+ warnings: []>
+2024-09-03 14:12:49,744 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2024-09-03 14:12:50,813 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "POST /v1/projects/jeevan-hm-portfolio-413008/locations/global/builds?alt=json HTTP/1.1" 200 None
+2024-09-03 14:12:50,830 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2024-09-03 14:12:51,039 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/global/operations/7b6872b3-a46d-40c5-88e0-29e4ab994a34?alt=json HTTP/1.1" 200 None
+2024-09-03 14:12:53,781 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2024-09-03 14:12:53,974 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/global/operations/7b6872b3-a46d-40c5-88e0-29e4ab994a34?alt=json HTTP/1.1" 200 None
+2024-09-03 14:12:57,407 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2024-09-03 14:12:57,667 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/global/operations/7b6872b3-a46d-40c5-88e0-29e4ab994a34?alt=json HTTP/1.1" 200 None
+2024-09-03 14:13:02,386 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2024-09-03 14:13:02,569 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/global/operations/7b6872b3-a46d-40c5-88e0-29e4ab994a34?alt=json HTTP/1.1" 200 None
+2024-09-03 14:13:08,430 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2024-09-03 14:13:08,603 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/global/operations/7b6872b3-a46d-40c5-88e0-29e4ab994a34?alt=json HTTP/1.1" 200 None
+2024-09-03 14:13:16,689 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2024-09-03 14:13:16,839 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/global/operations/7b6872b3-a46d-40c5-88e0-29e4ab994a34?alt=json HTTP/1.1" 200 None
+2024-09-03 14:13:28,088 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2024-09-03 14:13:28,322 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/global/operations/7b6872b3-a46d-40c5-88e0-29e4ab994a34?alt=json HTTP/1.1" 200 None
+2024-09-03 14:13:43,656 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2024-09-03 14:13:43,835 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/global/operations/7b6872b3-a46d-40c5-88e0-29e4ab994a34?alt=json HTTP/1.1" 200 None
+2024-09-03 14:14:05,606 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2024-09-03 14:14:05,973 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/global/operations/7b6872b3-a46d-40c5-88e0-29e4ab994a34?alt=json HTTP/1.1" 200 None
+2024-09-03 14:14:35,845 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2024-09-03 14:14:36,023 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/global/operations/7b6872b3-a46d-40c5-88e0-29e4ab994a34?alt=json HTTP/1.1" 200 None
+2024-09-03 14:15:17,575 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2024-09-03 14:15:17,776 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/global/operations/7b6872b3-a46d-40c5-88e0-29e4ab994a34?alt=json HTTP/1.1" 200 None
+2024-09-03 14:15:17,804 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): us-west1-run.googleapis.com:443
+2024-09-03 14:15:18,549 DEBUG    urllib3.connectionpool https://us-west1-run.googleapis.com:443 "POST /apis/serving.knative.dev/v1/namespaces/jeevan-hm-portfolio-413008/services?alt=json HTTP/1.1" 200 None
+2024-09-03 14:15:18,566 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): run.googleapis.com:443
+2024-09-03 14:15:19,096 DEBUG    urllib3.connectionpool https://run.googleapis.com:443 "GET /v1/projects/jeevan-hm-portfolio-413008/locations/us-west1/services/portfolio:getIamPolicy?alt=json HTTP/1.1" 200 None
+2024-09-03 14:15:19,103 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): run.googleapis.com:443
+2024-09-03 14:15:19,632 DEBUG    urllib3.connectionpool https://run.googleapis.com:443 "POST /v1/projects/jeevan-hm-portfolio-413008/locations/us-west1/services/portfolio:setIamPolicy?alt=json HTTP/1.1" 200 None
+2024-09-03 14:15:19,646 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): us-west1-run.googleapis.com:443
+2024-09-03 14:15:34,050 DEBUG    urllib3.connectionpool https://us-west1-run.googleapis.com:443 "POST /v1/projects/jeevan-hm-portfolio-413008/locations/us-west1/operations/50916507-af12-432d-8f81-b41b5abb0df2:wait?alt=json HTTP/1.1" 200 None
+2024-09-03 14:15:34,085 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): us-west1-run.googleapis.com:443
+2024-09-03 14:15:34,399 DEBUG    urllib3.connectionpool https://us-west1-run.googleapis.com:443 "POST /v1/projects/jeevan-hm-portfolio-413008/locations/us-west1/operations/50916507-af12-432d-8f81-b41b5abb0df2:wait?alt=json HTTP/1.1" 200 None
+2024-09-03 14:15:34,427 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): us-west1-run.googleapis.com:443
+2024-09-03 14:15:34,778 DEBUG    urllib3.connectionpool https://us-west1-run.googleapis.com:443 "POST /v1/projects/jeevan-hm-portfolio-413008/locations/us-west1/operations/50916507-af12-432d-8f81-b41b5abb0df2:wait?alt=json HTTP/1.1" 200 None
+2024-09-03 14:15:34,848 INFO     ___FILE_ONLY___ Service [[1mportfolio[m] revision [[1mportfolio-00001-dqm[m] has been deployed and is serving [1m100[m percent of traffic.
+Service URL: [1mhttps://portfolio-1041738425944.us-west1.run.app[m
+
+2024-09-03 14:15:34,850 DEBUG    root            Chosen display Format:none
+2024-09-03 14:15:34,851 INFO     root            Display format: "none"

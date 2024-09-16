@@ -1,0 +1,25 @@
+2024-09-03 14:09:16,317 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2024-09-03 14:09:16,319 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'configure_docker']
+2024-09-03 14:09:16,320 DEBUG    root            Running [gcloud.auth.configure-docker] with arguments: []
+2024-09-03 14:09:16,446 WARNING  root            Your config file at [/Users/jeevan/.docker/config.json] contains these credential helper entries:
+
+{
+  "credHelpers": {
+    "asia.gcr.io": "gcloud",
+    "eu.gcr.io": "gcloud",
+    "gcr.io": "gcloud",
+    "marketplace.gcr.io": "gcloud",
+    "staging-k8s.gcr.io": "gcloud",
+    "us.gcr.io": "gcloud"
+  }
+}
+2024-09-03 14:09:16,446 INFO     ___FILE_ONLY___ Adding credentials for all GCR repositories.
+
+2024-09-03 14:09:16,446 WARNING  root            A long list of credential helpers may cause delays running 'docker build'. We recommend passing the registry name to configure only the registry you are using.
+2024-09-03 14:09:16,446 INFO     ___FILE_ONLY___ gcloud credential helpers already registered correctly.
+
+2024-09-03 14:09:16,447 DEBUG    root            Chosen display Format:default
+2024-09-03 14:09:16,447 INFO     root            Display format: "default"
+2024-09-03 14:09:16,448 DEBUG    root            Checking for updates...
+2024-09-03 14:09:16,461 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): dl.google.com:443
+2024-09-03 14:09:16,736 DEBUG    urllib3.connectionpool https://dl.google.com:443 "GET /dl/cloudsdk/channels/rapid/components-2.json HTTP/1.1" 200 229029

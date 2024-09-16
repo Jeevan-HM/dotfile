@@ -1,0 +1,33 @@
+2024-08-29 23:41:41,056 DEBUG    root            Loaded Command Group: ['gcloud', 'run']
+2024-08-29 23:41:41,122 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'services']
+2024-08-29 23:41:41,165 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'services', 'list']
+2024-08-29 23:41:41,167 DEBUG    root            Running [gcloud.run.services.list] with arguments: [--platform: "managed", --region: "asia-east1"]
+2024-08-29 23:41:41,184 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2024-08-29 23:41:42,139 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/jeevan-hm-portfolio-413008/services?alt=json HTTP/1.1" 200 None
+2024-08-29 23:41:42,150 DEBUG    root            Chosen display Format:table(ready_symbol.color(red="[xX]",green="[✓✔]",yellow="[-!…]"):label="",firstof(id,metadata.name):label=SERVICE,region:label=REGION,domain:label=URL,last_modifier:label="LAST DEPLOYED BY",last_transition_time:label="LAST DEPLOYED AT"):(metadata.labels.'run.googleapis.com/satisfiesPzs':alias='satisfiesPzs')
+2024-08-29 23:41:42,151 INFO     root            Display format: "table(ready_symbol.color(red="[xX]",green="[✓✔]",yellow="[-!…]"):label="",firstof(id,metadata.name):label=SERVICE,region:label=REGION,domain:label=URL,last_modifier:label="LAST DEPLOYED BY",last_transition_time:label="LAST DEPLOYED AT"):(metadata.labels.'run.googleapis.com/satisfiesPzs':alias='satisfiesPzs')"
+2024-08-29 23:41:42,177 INFO     ___FILE_ONLY___    
+2024-08-29 23:41:42,177 INFO     ___FILE_ONLY___ SERVICE
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___    
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___ REGION
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___       
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___ URL
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___                                                 
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___ LAST DEPLOYED BY
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___        
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___ LAST DEPLOYED AT
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___ 
+
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___ [33;1m![39;0m
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___   
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___ jeevanhm
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___   
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___ asia-east1
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___   
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___ https://jeevanhm-1041738425944.asia-east1.run.app
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___   
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___ jeevanhm308@gmail.com
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___   
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___ 2024-08-30T06:38:22.415078Z
+2024-08-29 23:41:42,178 INFO     ___FILE_ONLY___ 
+

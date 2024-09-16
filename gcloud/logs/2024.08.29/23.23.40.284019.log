@@ -1,0 +1,13 @@
+2024-08-29 23:23:40,285 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'images']
+2024-08-29 23:23:40,327 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'images', 'list']
+2024-08-29 23:23:40,382 DEBUG    root            Running [gcloud.container.images.list] with arguments: []
+2024-08-29 23:23:40,386 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): gcr.io:443
+2024-08-29 23:23:40,901 DEBUG    urllib3.connectionpool https://gcr.io:443 "GET /v2/ HTTP/1.1" 401 None
+2024-08-29 23:23:41,027 DEBUG    urllib3.connectionpool https://gcr.io:443 "GET /v2/token?scope=repository%3Ajeevan-hm-portfolio-413008%3Apull&service=gcr.io HTTP/1.1" 200 None
+2024-08-29 23:23:41,165 DEBUG    urllib3.connectionpool https://gcr.io:443 "GET /v2/jeevan-hm-portfolio-413008/tags/list HTTP/1.1" 200 None
+2024-08-29 23:23:41,167 DEBUG    root            Chosen display Format:table(name)
+2024-08-29 23:23:41,169 INFO     root            Display format: "table(name)"
+2024-08-29 23:23:41,169 INFO     ___FILE_ONLY___ Listed 0 items.
+
+2024-08-29 23:23:41,169 INFO     ___FILE_ONLY___ Only listing images in gcr.io/jeevan-hm-portfolio-413008. Use --repository to list images in other repositories.
+
