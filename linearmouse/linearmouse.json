@@ -1,71 +1,96 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
   "schemes" : [
     {
       "scrolling" : {
         "reverse" : {
           "vertical" : true
         },
+        "acceleration" : 2,
         "modifiers" : {
-          "vertical" : {
-            "command" : {
-              "type" : "zoom"
-            }
-          },
           "horizontal" : {
             "command" : {
               "type" : "preventDefault"
             }
+          },
+          "vertical" : {
+            "command" : {
+              "type" : "zoom"
+            }
           }
         },
-        "acceleration" : 2,
         "speed" : {
-          "vertical" : 3,
-          "horizontal" : 2
+          "horizontal" : 2,
+          "vertical" : 3
         }
       },
       "pointer" : {
-        "speed" : 0.1,
-        "acceleration" : 1
+        "acceleration" : 1,
+        "speed" : 0.1
       },
       "if" : {
         "device" : {
-          "productName" : "2.4G Receiver",
           "vendorID" : "0x25a7",
+          "productName" : "2.4G Receiver",
           "productID" : "0xfa61",
           "category" : "mouse"
         }
       }
     },
     {
-      "if" : {
-        "device" : {
-          "productID" : "0xfa61",
-          "productName" : "2.4G Receiver",
-          "category" : "mouse",
-          "vendorID" : "0x25a7"
-        },
-        "app" : "company.thebrowser.Browser"
-      },
       "scrolling" : {
         "acceleration" : {
           "vertical" : 2
         }
+      },
+      "if" : {
+        "app" : "company.thebrowser.Browser",
+        "device" : {
+          "vendorID" : "0x25a7",
+          "productName" : "2.4G Receiver",
+          "category" : "mouse",
+          "productID" : "0xfa61"
+        }
       }
     },
     {
-      "pointer" : {
-        "speed" : 0.15
-      },
       "if" : {
         "app" : "com.lujjjh.LinearMouse",
         "device" : {
           "category" : "mouse",
+          "productID" : "0xfa61",
           "productName" : "2.4G Receiver",
-          "vendorID" : "0x25a7",
-          "productID" : "0xfa61"
+          "vendorID" : "0x25a7"
+        }
+      },
+      "pointer" : {
+        "speed" : 0.15
+      }
+    },
+    {
+      "scrolling" : {
+        "distance" : {
+          "vertical" : 3
+        },
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "speed" : {
+          "vertical" : 0
+        },
+        "reverse" : {
+          "vertical" : false
+        }
+      },
+      "if" : {
+        "device" : {
+          "vendorID" : "0x46d",
+          "category" : "mouse",
+          "productID" : "0xb034",
+          "serialNumber" : "27D4F71C",
+          "productName" : "MX Master 3S M"
         }
       }
     }
-  ]
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
 }
