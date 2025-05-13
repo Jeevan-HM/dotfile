@@ -89,12 +89,10 @@ return {
             mason_lspconfig.setup({
                 -- list of servers for mason to install
                 ensure_installed = {
-                    "tsserver",
                     "html",
                     "cssls",
                     "tailwindcss",
                     "lua_ls",
-                    "ruff_lsp",
                     "pyright",
                 },
                 -- auto-install configured servers (with lspconfig)
@@ -117,12 +115,10 @@ return {
         config = function()
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
             local ensure_installed = {
-                "tsserver",
                 "html",
                 "cssls",
                 "tailwindcss",
                 "lua_ls",
-                "ruff_lsp",
                 "pyright",
             }
             local lspconfig = require("lspconfig")
